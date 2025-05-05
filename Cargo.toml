@@ -1,0 +1,9 @@
+[package]
+name = "rail"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["wincon", "consoleapi", "processenv", "winbase"] }
