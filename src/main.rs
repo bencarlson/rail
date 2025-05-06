@@ -251,17 +251,3 @@ fn follow_file(filename: &str, retry_mode: bool) -> io::Result<()> {
         }
     }
 }
-
-// Windows-specific Cargo.toml dependencies:
-// 
-// [target.'cfg(windows)'.dependencies]
-// winapi = { version = "0.3", features = ["wincon", "consoleapi", "processenv", "winbase"] }
-//
-// To build this project:
-// 1. Create a new Rust project: `cargo new wintail`
-// 2. Replace the main.rs with this code
-// 3. Add the dependencies to Cargo.toml
-// 4. Build with `cargo build --release`
-//
-// Example usage:
-// rail.exe C:\Windows\Logs\CBS\CBS.log -f -n 50
